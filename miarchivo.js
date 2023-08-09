@@ -8,6 +8,9 @@ const iva = x => x * 0.21
 const descuento = j => j * 0.10
 
 // Un producto con iva
+
+
+
 if (producto1) {
     let precio = suma(producto1, iva(producto1)) 
     console.log("El precio del producto es: $" + precio)
@@ -58,3 +61,36 @@ for(let i = 1; i <= 5; i++){
 }
 
 console.log("El precio final es: $" + precioFinal)
+
+// segunda pre-entrega
+//arrays,objetos,variables y funciones
+
+class compra {
+    constructor(nombre, precio) {
+        this.nombre = nombre.toUpperCase ();
+        this.precio = parseFloat(precio);
+        this.vendido = false
+    }
+    iva () {
+        this.precio =  this.precio * 10.00;
+    }
+    vender () {
+        this.vendido = true
+    }
+}
+
+const cerveza = new compra ("cerveza", "800");
+const mani = new compra ("mani", "300");
+cerveza.iva ();
+mani.iva ();
+cerveza.vender ();
+
+
+const stok = [cerveza, mani]
+
+const ab = stok.filter((final) => final.vendido === true)
+console.log(ab)
+
+
+let carrito = prompt(`Mi carritos de compras`);
+alert(`En mi carrito tengo ${carrito}`);
