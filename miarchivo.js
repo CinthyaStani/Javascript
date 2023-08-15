@@ -94,3 +94,11 @@ console.log(ab)
 
 let carrito = prompt(`Mi carritos de compras`);
 alert(`En mi carrito tengo ${carrito}`);
+
+// ...............................
+
+let boton = document.getElementById("click")
+boton.addEventListener = () => {console.log("click", respuestaClick)}
+function respuestaClick () {
+   console.log("El usuario ha hecho click")
+}
